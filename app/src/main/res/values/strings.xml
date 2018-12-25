@@ -7,4 +7,13 @@
     <string name="google_status_fmt">Google User: %s</string>
     <string name="firebase_status_fmt">Firebase User: %s</string>
     <string name="loading">loading</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="welcome">Welcome!</string>
+    <string name="dr_rb_common">Common</string>
+    <string name="dr_rb_success">Success based</string>
+    <string name="dr_tv_roll_type">Roll Type</string>
+    <string name="cdr_bt_roll">Roll</string>
+    <string name="cdr_bt_add">+</string>
+    <string name="cdr_bt_clear">Clear Rolls</string>
 </resources>
