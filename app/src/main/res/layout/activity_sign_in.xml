@@ -5,7 +5,7 @@
     android:layout_width="match_parent"
     android:layout_height="match_parent"
     tools:context=".ui.SignIn"
-    android:background="@color/light_grey">
+    android:background="@color/gray50">
 
     <com.gigamole.library.PulseView
         android:id="@+id/sign_in_pulse_view"
@@ -20,7 +20,7 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toBottomOf="@+id/sign_in_button"
         app:pv_alpha="70"
-        app:pv_color="@color/red"
+        app:pv_color="@color/red500"
         app:pv_icon="@drawable/splash_load"
         app:pv_icon_height="150dp"
         app:pv_icon_width="150dp"
@@ -57,5 +57,25 @@
         app:layout_constraintStart_toStartOf="parent"
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.23000002" />
+
+    <TextView
+        android:id="@+id/si_tv_status"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginEnd="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_in_button"
+        app:layout_constraintEnd_toStartOf="@+id/sign_in_button"
+        app:layout_constraintTop_toTopOf="@+id/sign_in_button" />
+
+    <TextView
+        android:id="@+id/si_tv_details"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginStart="8dp"
+        android:text="TextView"
+        app:layout_constraintBottom_toBottomOf="@+id/sign_in_button"
+        app:layout_constraintStart_toEndOf="@+id/sign_in_button"
+        app:layout_constraintTop_toTopOf="@+id/sign_in_button" />
 
 </android.support.constraint.ConstraintLayout>
