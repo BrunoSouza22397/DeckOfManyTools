@@ -16,4 +16,11 @@
     <string name="cdr_bt_roll">Roll</string>
     <string name="cdr_bt_add">+</string>
     <string name="cdr_bt_clear">Clear Rolls</string>
+    <string name="ld_tv_dice_number"># of dice</string>
+    <string name="sign_out">Sign Out</string>
+    <string name="wc_tutorial">Use the tabs above to navigate.</string>
+    <string name="tab_home">home</string>
+    <string name="tab_dice">Dice</string>
+    <string name="tab_initiative">Initiative</string>
+    <string name="tb_init_title">Initiative Order</string>
 </resources>

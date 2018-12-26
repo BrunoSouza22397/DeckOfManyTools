@@ -1,19 +1,14 @@
 package souza.bruno.deckofmanytools.ui;
 
-import android.app.ProgressDialog;
 import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.annotation.Nullable;
-import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 import android.view.View;
-import android.widget.Button;
-import android.widget.TextView;
 import android.widget.Toast;
 
 import com.gigamole.library.PulseView;
-import com.google.android.gms.auth.api.Auth;
 import com.google.android.gms.auth.api.signin.GoogleSignIn;
 import com.google.android.gms.auth.api.signin.GoogleSignInAccount;
 import com.google.android.gms.auth.api.signin.GoogleSignInClient;
@@ -34,14 +29,10 @@ import com.google.firebase.auth.GoogleAuthProvider;
 import souza.bruno.deckofmanytools.R;
 import souza.bruno.deckofmanytools.model.BaseActivity;
 
-import static souza.bruno.deckofmanytools.R.id.sign_in_pulse_view;
-
 public class SignIn extends BaseActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
 
     private PulseView pulseView;
     private SignInButton btSignIn;
-    private TextView tvStatus;
-    private TextView tvDetails;
 
     private FirebaseAuth mAuth;
 
@@ -66,8 +57,6 @@ public class SignIn extends BaseActivity implements View.OnClickListener, Google
 
         mAuth = FirebaseAuth.getInstance();
 
-        tvStatus = findViewById(R.id.si_tv_status);
-        tvDetails = findViewById(R.id.si_tv_details);
         btSignIn = findViewById(R.id.sign_in_button);
         btSignIn.setOnClickListener(this);
     }
@@ -76,7 +65,6 @@ public class SignIn extends BaseActivity implements View.OnClickListener, Google
     protected void onStart() {
         super.onStart();
         FirebaseUser currentUser = mAuth.getCurrentUser();
-        updateUI(currentUser);
     }
 
     @Override
@@ -105,7 +93,6 @@ public class SignIn extends BaseActivity implements View.OnClickListener, Google
                 firebaseAuth(account);
             }catch(ApiException e) {
                 Log.w(TAG, "Google sign in falhou.", e);
-                updateUI(null);
             }
         }
     }
@@ -126,11 +113,11 @@ public class SignIn extends BaseActivity implements View.OnClickListener, Google
                         if (task.isSuccessful()){
                             Log.d(TAG, "signInCredential:success");
                             FirebaseUser user = mAuth.getCurrentUser();
-                            updateUI(user);
+                            Intent intent = new Intent(SignIn.this, MainActivity.class);
+                            startActivity(intent);
                         }else{
                             Log.w(TAG, "signInWithCredential:failure", task.getException());
                             Toast.makeText(getBaseContext(), "Autenticação falhou.", Toast.LENGTH_SHORT).show();
-                            updateUI(null);
                         }
                         hideProgressDialog();
                     }
@@ -141,20 +128,11 @@ public class SignIn extends BaseActivity implements View.OnClickListener, Google
         Log.d(TAG, "handleSignInResult: "+result.isSuccess());
         if (result.isSuccess()) {
             GoogleSignInAccount acct = result.getSignInAccount();
-            tvStatus.setText(acct.getDisplayName());
         }
     }
 
     private void signIn(){
         Intent signInIntent = mGooglesignInClient.getSignInIntent();
         startActivityForResult(signInIntent, RC_SIGN_IN);
-    }
-    private void updateUI(FirebaseUser user){
-        if (user != null){
-            tvStatus.setText(getString(R.string.google_status_fmt, user.getEmail()));
-            tvDetails.setText(getString(R.string.firebase_status_fmt, user.getUid()));
-        }else{
-            tvStatus.setText("Signed Out");
-        }
     }
 }

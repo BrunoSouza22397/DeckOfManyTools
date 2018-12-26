@@ -11,13 +11,14 @@
     <android.support.v7.widget.RecyclerView
         android:id="@+id/cdr_rv_dice"
         android:layout_width="0dp"
-        android:layout_height="wrap_content"
+        android:layout_height="300dp"
         android:layout_marginStart="8dp"
         android:layout_marginTop="8dp"
         android:layout_marginEnd="8dp"
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toTopOf="parent" />
+        app:layout_constraintTop_toTopOf="parent"
+        tools:listitem="@layout/line_dice" />
 
     <Button
         android:id="@+id/cdr_bt_roll"

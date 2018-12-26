@@ -58,24 +58,4 @@
         app:layout_constraintTop_toTopOf="parent"
         app:layout_constraintVertical_bias="0.23000002" />
 
-    <TextView
-        android:id="@+id/si_tv_status"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginEnd="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/sign_in_button"
-        app:layout_constraintEnd_toStartOf="@+id/sign_in_button"
-        app:layout_constraintTop_toTopOf="@+id/sign_in_button" />
-
-    <TextView
-        android:id="@+id/si_tv_details"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginStart="8dp"
-        android:text="TextView"
-        app:layout_constraintBottom_toBottomOf="@+id/sign_in_button"
-        app:layout_constraintStart_toEndOf="@+id/sign_in_button"
-        app:layout_constraintTop_toTopOf="@+id/sign_in_button" />
-
 </android.support.constraint.ConstraintLayout>
