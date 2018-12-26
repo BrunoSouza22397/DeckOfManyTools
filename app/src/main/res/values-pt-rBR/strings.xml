@@ -1,0 +1,18 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="signin_bt_SignIn">Fazer login</string>
+    <string name="signin_title">Quem vem lá?</string>
+    <string name="loading">carregando</string>
+    <string name="welcome">Bem vindo!</string>
+    <string name="dr_rb_common">Comum</string>
+    <string name="dr_rb_success">Base de Sucesso</string>
+    <string name="dr_tv_roll_type">Tipo de Rolagem</string>
+    <string name="cdr_bt_roll">Rolar</string>
+    <string name="cdr_bt_clear">Limpar</string>
+    <string name="ld_tv_dice_number">nº de dados</string>
+    <string name="sign_out">Deslogar</string>
+    <string name="wc_tutorial">Use as abas acima para navegação.</string>
+    <string name="tab_dice">Dados</string>
+    <string name="tab_initiative">Iniciativa</string>
+    <string name="tb_init_title">Ordem de Iniciativa</string>
+</resources>

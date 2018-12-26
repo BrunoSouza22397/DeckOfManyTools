@@ -32,7 +32,6 @@ import souza.bruno.deckofmanytools.model.BaseActivity;
 public class SignIn extends BaseActivity implements View.OnClickListener, GoogleApiClient.OnConnectionFailedListener {
 
     private PulseView pulseView;
-    private SignInButton btSignIn;
 
     private FirebaseAuth mAuth;
 
@@ -57,7 +56,7 @@ public class SignIn extends BaseActivity implements View.OnClickListener, Google
 
         mAuth = FirebaseAuth.getInstance();
 
-        btSignIn = findViewById(R.id.sign_in_button);
+        SignInButton btSignIn = findViewById(R.id.sign_in_button);
         btSignIn.setOnClickListener(this);
     }
 
@@ -90,6 +89,7 @@ public class SignIn extends BaseActivity implements View.OnClickListener, Google
             Task<GoogleSignInAccount> task = GoogleSignIn.getSignedInAccountFromIntent(data);
             try{
                 GoogleSignInAccount account = task.getResult(ApiException.class);
+                assert account != null;
                 firebaseAuth(account);
             }catch(ApiException e) {
                 Log.w(TAG, "Google sign in falhou.", e);

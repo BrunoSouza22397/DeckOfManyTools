@@ -1,25 +1,25 @@
 <resources>
-    <string name="app_name">Deck Of Many Tools</string>
-    <string name="splash_title">Deck of Many Tools</string>
-    <string name="splash_title_extra">The amazing</string>
+    <string name="app_name" translatable="false">Deck Of Many Tools</string>
+    <string name="splash_title" translatable="false">Deck of Many Tools</string>
+    <string name="splash_title_extra" translatable="false">The amazing</string>
     <string name="signin_bt_SignIn">Sign In</string>
     <string name="signin_title">Who goes there?</string>
-    <string name="google_status_fmt">Google User: %s</string>
-    <string name="firebase_status_fmt">Firebase User: %s</string>
+    <string name="google_status_fmt" translatable="false">Google User: %s</string>
+    <string name="firebase_status_fmt" translatable="false">Firebase User: %s</string>
     <string name="loading">loading</string>
 
-    <string name="hello_blank_fragment">Hello blank fragment</string>
+    <string name="hello_blank_fragment" translatable="false">Hello blank fragment</string>
     <string name="welcome">Welcome!</string>
     <string name="dr_rb_common">Common</string>
     <string name="dr_rb_success">Success based</string>
     <string name="dr_tv_roll_type">Roll Type</string>
     <string name="cdr_bt_roll">Roll</string>
-    <string name="cdr_bt_add">+</string>
-    <string name="cdr_bt_clear">Clear Rolls</string>
+    <string name="cdr_bt_add" translatable="false">+</string>
+    <string name="cdr_bt_clear">Clear</string>
     <string name="ld_tv_dice_number"># of dice</string>
     <string name="sign_out">Sign Out</string>
     <string name="wc_tutorial">Use the tabs above to navigate.</string>
-    <string name="tab_home">home</string>
+    <string name="tab_home" translatable="false">home</string>
     <string name="tab_dice">Dice</string>
     <string name="tab_initiative">Initiative</string>
     <string name="tb_init_title">Initiative Order</string>

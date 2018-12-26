@@ -7,16 +7,10 @@ import android.support.v4.view.ViewPager;
 import android.support.v7.app.AppCompatActivity;
 import android.util.Log;
 
-import com.google.firebase.auth.FirebaseAuth;
-import com.google.firebase.auth.FirebaseUser;
-
 import java.util.Objects;
 
 import souza.bruno.deckofmanytools.R;
 import souza.bruno.deckofmanytools.adapters.PageAdapter;
-import souza.bruno.deckofmanytools.ui.fragments.Welcome;
-
-;
 
 public class MainActivity extends AppCompatActivity {
 
